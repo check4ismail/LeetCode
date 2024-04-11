@@ -17,7 +17,7 @@ public class MedianFinder {
 	/// Add new number to list while maintaining sort order efficiently
 	/// Time complexity: O(n), Space complexity: O(n)
 	public func addNum(_ num: Int) {
-		guard let firstIndex = nums.firstIndex(where: { $0 > num }) else {
+		if let firstIndex = nums.firstIndex(where: { $0 > num }) {
 			nums.insert(num, at: firstIndex)
 		} else {
 			nums.append(num)
